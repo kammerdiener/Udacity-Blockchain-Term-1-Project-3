@@ -2,12 +2,12 @@
 
 Project built using the Express Framework
 
-##USAGE
-###Get Block
+## USAGE
+### Get Block
 ```
 curl "http://localhost:8000/block/{{HEIGHT}}"
 ```
-###Post Block
+### Post Block
 ```
 curl "http://localhost:8000/block/"
 
@@ -16,6 +16,6 @@ BODY: {
 }
 ```
 
-##SET UP
+## SET UP
 1. Run npm install
 2. Run node server.js
