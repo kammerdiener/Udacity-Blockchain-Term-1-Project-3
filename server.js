@@ -36,7 +36,7 @@ app.get('/block/:height', async (req, res) => {
 
 // Add a block
 app.post('/block', async (req, res) => {
-  const newBlockPayload = req.body.payload;
+  const newBlockPayload = req.body.body;
   if (newBlockPayload === '' || newBlockPayload === undefined){
     res.status(400).json({
       "code": 400,
