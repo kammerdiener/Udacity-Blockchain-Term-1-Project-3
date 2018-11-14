@@ -34,7 +34,6 @@ async function addLevelDBData(key,value){
 // Get data from levelDB with key
 function getBlock(key){
   return new Promise((resolve, reject) => {
-    console.log(key);
     db.get(key)
       .then((block) => {
         resolve(block);
@@ -96,6 +95,17 @@ class Blockchain{
   }
 
   // Helpers
+  getBlock(height) {
+    return new Promise((resolve, reject) => {
+      getBlock(height)
+        .then((block) => {
+          resolve(JSON.parse(block));
+        })
+        .catch((err) => {
+          reject(err);
+        })
+    })
+  }
 
   // Add new block
   async addBlock(newBlock) {
